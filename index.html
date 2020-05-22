@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form name="formulario" autocomplete="on">
+            Campo texto <input type="text" name="nome" id="nome">
+            <br>
+            Campo texto tamanho 30<input type="text" id="textomaior" size="30">
+            <br>
+            Campo texto tamanho máximo 15<input type="text" maxlength="15">
+            <br>
+            Campo texto com texto de dica <input type ="text" placeholder ="Informe seu nome aqui">
+            <br>
+            Campo texto com texto obrigatório <input type ="text" required>
+            <br>
+            Campo texto com texto somente leitura <input type ="text" readonly>
+            <br>
+            Campo texto com texto desabilitado <input type ="text" disabled>
+            <br>
+            Campo texto com valor<input type ="text" value="Valor aqui">
+            <br>
+            Campo texto com título<input type ="text" title="Título">
+            <br>
+            Permitir caracteres<input type="text"  pattern="[A-Za-z]{5}" >
+            <br>
+            Números <input type="number">
+            <br>
+            Números min e max<input type="number" min="10" max = "20">
+            <br>
+            Números intervalo<input type="number" step="5">
+            <br>
+            Escolher cor<input type="color" value="#ff0000">
+            <br>
+            E-mail<input type="email" id="email" name="email">          
+            <br>
+            Data  <input type="date">          
+            <br>       
+            Senha  <input type="password">          
+            <br>
+            Resetar  <input type="reset">          
+            <br>
+            Sim<input type="radio" value="Sim" name ="teste" > Não<input type="radio" value="Não" name ="teste" checked="true">
+            <br>
+
+<input type="submit" value="Enviar">
+        </form>
+</body>
+</html>
