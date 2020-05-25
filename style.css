@@ -54,20 +54,25 @@ header{
 }
 
 form{
-	
+	width: 1240px;
+	margin: 0 auto;
 
 }
 
 
 
 label{
-	line-height: 10px;
-	margin-right: 10px;
+	
+	display: block;
+	margin: 20px 0;
+	padding-left: 15px;
 }
 
 
 input{
-	
+	display: block;
+	width: 30%;
+	padding: 20px;
 	
 }
 
@@ -77,8 +82,13 @@ p{
 	color: rgb(0, 0, 0);
 	font-size: 18px;
 	font-weight: bold;
-	margin-left: 15px;	
+		
 }
+
+
+
+
+
 p:hover{	
 	color: rgb(97, 11, 255);
 	text-shadow: rgb(255, 255, 255) 0px 0px 10px;
@@ -86,13 +96,17 @@ p:hover{
 }
 .corpo{
 	background-image: url("0.jpg");	
-	background-size: 200vh;
+	background-attachment: fixed;
+	background-size: 100%;
 	padding-bottom: 100px;
 	
 }
-.enviar{
-	margin-left: 20px;
-}
+
 .mario{
+	margin-top: 50px;
+	margin-left: 150px;
 	width: 7%;
+}
+.mario:hover{	
+	width: 10%;
 }
