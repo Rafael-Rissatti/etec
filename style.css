@@ -43,10 +43,13 @@ table {
 }
 
 
-
+.gif{
+	width: 10%;
+}
 
 
 header{
+	width: 100%;
 	background-color: #cccccc;
 	text-align: center;
 	border-top: 15px #4d0180 solid;
@@ -102,9 +105,8 @@ p:hover{
 	
 }
 
-.mario{
-	margin-top: 50px;
-	margin-left: 150px;
+.mario{	
+	margin-left: 500px;
 	width: 7%;
 }
 .mario:hover{	
