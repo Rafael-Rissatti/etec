@@ -1,53 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">    
     <title>Formulário</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form name="formulario" autocomplete="on">
-            Campo texto <input type="text" name="nome" id="nome">
-            <br>
-            Campo texto tamanho 30<input type="text" id="textomaior" size="30">
-            <br>
-            Campo texto tamanho máximo 15<input type="text" maxlength="15">
-            <br>
-            Campo texto com texto de dica <input type ="text" placeholder ="Informe seu nome aqui">
-            <br>
-            Campo texto com texto obrigatório <input type ="text" required>
-            <br>
-            Campo texto com texto somente leitura <input type ="text" readonly>
-            <br>
-            Campo texto com texto desabilitado <input type ="text" disabled>
-            <br>
-            Campo texto com valor<input type ="text" value="Valor aqui">
-            <br>
-            Campo texto com título<input type ="text" title="Título">
-            <br>
-            Permitir caracteres<input type="text"  pattern="[A-Za-z]{5}" >
-            <br>
-            Números <input type="number">
-            <br>
-            Números min e max<input type="number" min="10" max = "20">
-            <br>
-            Números intervalo<input type="number" step="5">
-            <br>
-            Escolher cor<input type="color" value="#ff0000">
-            <br>
-            E-mail<input type="email" id="email" name="email">          
-            <br>
-            Data  <input type="date">          
-            <br>       
-            Senha  <input type="password">          
-            <br>
-            Resetar  <input type="reset">          
-            <br>
-            Sim<input type="radio" value="Sim" name ="teste" > Não<input type="radio" value="Não" name ="teste" checked="true">
-            <br>
+	<header>
+		<img src="logo.png">
+	</header>
+	<main class="corpo">
+		<form name="formulario" autocomplete="on">
+			<p><Label for="nome">Nome:</Label>
+			<input type="text" name="nome" id="nome" placeholder="Digite seu nome" title="Digite seu nome"></p>
+			<p><Label for="idade">Digite sua idade:</Label><input type="number" min="0" max="99" title="Valor aceitável de 0 a 99" name="idade" id="idade"></p>
+			<p><Label for="jogo">Digite um jogo de Super Nintendo:</Label><input type="text" id="textomaior" size="20" value="Super Mario World" title="Super Mario World" name="jogo" id="jogo"></p>
+	        <p><Label for="mkii">Qual melhor personagem de MKII:</Label><input type="text" maxlength="15" title="Raiden" pattern="[A-Za-z]{5}" name="mkii" id="mkii" size="19"></p>	        
+	        <p><Label for="cor">Qual a cor do Yoshi que voa ?</Label><input type="color" value="#ff0000" name="cor" id="cor"></p>	        
+			<p><Label for="email">Digite seu email:</Label><input type="email" id="email" name="email"></p>    
+			<p><Label for="data">Data da compra do seu primeiro cartucho:</Label><input type="date" name="data" id="data"></p>          
+			<p><Label for="senha">Defina uma senha:</Label><input type="password" name="senha" id="senha"></p>
+			<p><Label for="confirme">Confirme a senha:</Label><input type="password" name="confirme" id="confirme"></p> 
+	     	<p class="radio">Mario Kart:<input type="radio" value="Sim" name ="teste">F-Zero:<input type="radio" value="Não" name ="teste" checked="true"></p>
+			<p><Label for="nome">Limpar dados</Label><input type="reset"></p>  
+	        
+			<p class="enviar"><input type="submit" value="Enviar"></p>
+			<img class="mario" src="mkt.gif">
+		</main>
+		<footer>
+			
+		</footer>
 
-<input type="submit" value="Enviar">
-        </form>
+    </form>
 </body>
 </html>
