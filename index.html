@@ -1,37 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">    
-    <title>Formulário</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<header>
-		<img class="gif" src="m.gif">
-		<img src="logo.png">
-	</header>
-	<main class="corpo">
-		<form name="formulario" autocomplete="on">
-			<p><Label for="nome">Nome:</Label>
-			<input type="text" name="nome" id="nome" placeholder="Digite seu nome" title="Digite seu nome"></p>
-			<p><Label for="idade">Digite sua idade:</Label><input type="number" min="0" max="99" title="Valor aceitável de 0 a 99" name="idade" id="idade"></p>
-			<p><Label for="jogo">Digite um jogo de Super Nintendo:</Label><input type="text" id="textomaior" size="20" value="Super Mario World" title="Super Mario World" name="jogo" id="jogo"></p>
-	        <p><Label for="mkii">Qual melhor personagem de MKII:</Label><input type="text" maxlength="15" title="Raiden" pattern="[A-Za-z]{5}" name="mkii" id="mkii" size="19"></p>	        
-	        <p><Label for="cor">Qual a cor do Yoshi que voa ?</Label><input type="color" value="#ff0000" name="cor" id="cor"></p>	        
-			<p><Label for="email">Digite seu email:</Label><input type="email" id="email" name="email"></p>    
-			<p><Label for="data">Data da compra do seu primeiro cartucho:</Label><input type="date" name="data" id="data"></p>          
-			<p><Label for="senha">Defina uma senha:</Label><input type="password" name="senha" id="senha" title="Apenas Números"></p>
-			<p><Label for="confirme">Confirme a senha:</Label><input type="password" name="confirme" id="confirme" title="A mesma de cima cabação"></p> 
-	     	<p class="radio">Mario Kart:<input type="radio" value="Sim" name ="teste">F-Zero:<input type="radio" value="Não" name ="teste" checked="true" ></p>
-			<p><Label for="nome">Limpar dados</Label><input type="reset"></p>  
-	        
-			<p class="enviar"><input type="submit" value="Enviar"></p>
-			<img class="mario" src="mkt.gif">
-		</main>
-		<footer>
-			
-		</footer>
+    <title></title>
+    <meta charset="utf-8">
+    <script language=javascript type="text/javascript">   
+        function Soma()
+        {                
+            var valor1 = parseFloat(form.valor1.value);
+            var valor2 = parseFloat(form.valor2.value);            
+            var resultado = valor1 + valor2;            
+            var componente =document.getElementById('resultado');
+            componente.value ="A soma é = "+resultado;
+        }
 
-    </form>
-</body>
+         function Sub()
+        {                
+            var valor1 = parseFloat(form.valor1.value);
+            var valor2 = parseFloat(form.valor2.value);            
+            var resultado = valor1 - valor2;            
+            var componente =document.getElementById('resultado');
+            componente.value ="A subtração é = "+resultado;
+        }
+
+         function Mult()
+        {                
+            var valor1 = parseFloat(form.valor1.value);
+            var valor2 = parseFloat(form.valor2.value);           
+            var resultado = valor1 * valor2;            
+            var componente =document.getElementById('resultado');
+            componente.value ="A multiplicação é = "+resultado;
+        }
+         function Div()
+        {                
+            var valor1 = parseFloat(form.valor1.value);
+            var valor2 = parseFloat(form.valor2.value);           
+            var resultado = valor1 / valor2 ;            
+            var componente =document.getElementById('resultado');
+            componente.value ="A divisão é = "+resultado;
+        }
+    </script>
+    <style type="text/css">
+    .campo:hover{
+        background-color: orange;
+    }
+    .campo{
+        margin: 5px;
+        width: 5%;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    
+
+    .valor:hover{
+        background-color: orange;
+    }
+
+    .valores{
+        margin: 10px;
+    }
+    
+    .valor{
+        width: 5%;
+        margin-bottom: 10px;
+    }
+
+    .resultado{
+        padding: 5px 0;
+        width: 15%;
+        font-weight: bold;
+        background-color: orange;
+    }
+    </style>
+
+    <body>
+        <form name="form">
+            <section class="valores">   
+                <label for="valor1"> Valor 1</label> <input class="valor" type="text" id="valor1" name="valor1" required><br>
+                <label for="valor2"> Valor 2</label> <input class="valor" type="text" id="valor2" name="valor2" required><br>          
+                <label for="resultado"> Resultado</label> <input class="resultado" type="text" id="resultado" name="resultado" disabled="true"><br>
+            </section> 
+            <section class="campos">
+                <div>
+                    <input class="campo" type ="button" value="+" onClick="Soma()">
+                    <input class="campo" type ="button" value="-" onClick="Sub()">
+                </div> 
+                <div>   
+                    <input class="campo" type ="button" value="x" onClick="Mult()">
+                    <input class="campo" type ="button" value="÷" onClick="Div()">
+                </div> 
+            </section>
+
+        </form>
+    </body>
 </html>
